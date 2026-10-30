@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Campus Study Hub — find study notes, important questions, and previous-year question papers." />
+  <title>Campus Study Hub | Learn Smarter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" id="brandHome" aria-label="Campus Study Hub home">
+      <span class="brand-mark">🎓</span>
+      <span><strong>Campus Study Hub</strong><small>Your learning companion</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="top-nav" id="topNav">
+      <a href="#home" data-home-link>Home</a>
+      <a href="#resources" data-home-link>Resources</a>
+      <a href="#about" data-home-link>About</a>
+    </nav>
+  </header>
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true"></div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> YOUR COLLEGE SUCCESS STARTS HERE</span>
+        <h1>Welcome to <span>Campus Study Hub!</span></h1>
+        <p class="hero-copy">Find notes, previous-year question papers, and important topics — all organised in one place to make exam preparation simpler.</p>
+        <a class="primary-btn" href="#resources">Explore study resources <span aria-hidden="true">→</span></a>
+        <div class="hero-trust">
+          <span>✓ Easy to explore</span><span>✓ Student-friendly</span><span>✓ Free resources</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-card art-card-main">
+          <div class="art-icon">📚</div><div class="art-lines"><i></i><i></i><i></i></div>
+          <span class="art-card-label">Your study space</span>
+        </div>
+        <div class="float-chip chip-top">✦ Study smarter</div>
+        <div class="float-chip chip-bottom">✓ Exam ready</div>
+        <div class="art-spark spark-one">✦</div><div class="art-spark spark-two">✧</div>
+      </div>
+    </section>
+
+    <section class="resource-section section-wrap" id="resources">
+      <div class="section-heading">
+        <div><span class="eyebrow">LEARNING RESOURCES</span><h2>What are you looking for?</h2></div>
+        <p>Choose a section and find the right material for your course and semester.</p>
+      </div>
+      <div class="resource-grid">
+        <button class="resource-card paper-card" data-section="papers">
+          <span class="card-icon">📄</span><span class="card-tag">PRACTICE</span>
+          <h3>Question Papers</h3><p>Prepare with previous-year question papers, organised by subject and semester.</p>
+          <span class="card-link">Explore papers <b>↗</b></span>
+        </button>
+        <button class="resource-card important-card" data-section="important">
+          <span class="card-icon">🎯</span><span class="card-tag">REVISION</span>
+          <h3>Important Questions &amp; Topics</h3><p>Review key topics and practice important questions before your exams.</p>
+          <span class="card-link">Explore important topics <b>↗</b></span>
+        </button>
+        <button class="resource-card notes-card" data-section="notes">
+          <span class="card-icon">📘</span><span class="card-tag">LEARN</span>
+          <h3>Study Notes</h3><p>Access subject-wise notes and learning resources to understand concepts.</p>
+          <span class="card-link">Explore notes <b>↗</b></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="browse-section section-wrap" id="browseSection" hidden>
+      <div class="browse-top">
+        <div><span class="eyebrow" id="browseEyebrow">RESOURCE LIBRARY</span><h2 id="browseTitle">Browse resources</h2></div>
+        <button class="text-btn" id="backHome">← Back to home</button>
+      </div>
+      <div class="browse-toolbar">
+        <label class="search-box"><span>⌕</span><input type="search" id="searchInput" placeholder="Search department, course, semester or subject..." autocomplete="off" /><button id="clearSearch" aria-label="Clear search" hidden>×</button></label>
+        <span class="result-count" id="resultCount"></span>
+      </div>
+      <nav class="breadcrumbs" id="breadcrumbs" aria-label="Breadcrumb"></nav>
+      <div class="browse-content" id="browseContent"></div>
+    </section>
+
+    <section class="how-section">
+      <div class="section-wrap how-inner">
+        <div><span class="eyebrow">SIMPLE STEPS</span><h2>Find your material in seconds</h2><p>Navigate through your academic details to reach the resources you need.</p></div>
+        <div class="steps">
+          <div class="step"><span>01</span><div><strong>Select a department</strong><small>Choose your area of study.</small></div></div>
+          <div class="step"><span>02</span><div><strong>Choose course &amp; semester</strong><small>Go to your current course level.</small></div></div>
+          <div class="step"><span>03</span><div><strong>Open a subject</strong><small>Preview or download available PDFs.</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section section-wrap" id="about">
+      <div class="about-icon">💡</div><div><span class="eyebrow">ABOUT THE HUB</span><h2>Made for students, by a student mindset.</h2><p>Campus Study Hub brings learning resources together in a simple, organised place. The sample files included are demonstrations — replace them with verified material for your university.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="#home">🎓 Campus Study Hub</a><span>Learn smarter. Prepare better. Achieve more.</span><span>© <span id="year"></span> Campus Study Hub</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
